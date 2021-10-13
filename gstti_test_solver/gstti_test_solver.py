@@ -121,20 +121,23 @@ def solve_test(username: str, password: str, test_name: str, test_value: TestTyp
 if __name__ == "__main__":
     match len(sys.argv):
         case 2:
-            if sys.argv[1] == "--help":
-                help()
-            else:
-                eprint("Unrecognized secondary flag: " + sys.argv[1])
-                eprint("Only supported script flag is `--help`")
-                sys.exit(errno.EPERM)
+            match sys.argv[1]:
+                case "--help":
+                    help()
+                case _:
+                    eprint("Unrecognized secondary flag: " + sys.argv[1])
+                    eprint("Only supported script flag is `--help`")
+                    sys.exit(errno.EPERM)
         case 4:
             test = which_test(sys.argv[3])
-            if test == TestType.ERROR:
-                eprint("Unrecognized <test_name>:" + sys.argv[3] + " probably not a valid gstti test.")
-                eprint("gstti_test_solver <username> <password> <test_name>")
-                sys.exit(errno.ENOENT)
-            solve_test(sys.argv[1], sys.argv[2], sys.argv[3], test)
-            sys.exit()
+            match test:
+                case TestType.ERROR:
+                    eprint("Unrecognized <test_name>: " + sys.argv[3] + " probably not a valid gstti test.")
+                    eprint("gstti_test_solver <username> <password> <test_name>")
+                    sys.exit(errno.ENOENT)
+                case _:
+                    solve_test(sys.argv[1], sys.argv[2], sys.argv[3], test)
+                    sys.exit()
         case _:
             eprint("Unrecognized script usage...")
             eprint("Please use `gstti_test_solver --help` for more information.")
