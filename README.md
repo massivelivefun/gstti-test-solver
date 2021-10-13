@@ -1,6 +1,6 @@
 # gstti-test-solver
 
-A small and simple test solver for quickly getting through gstti's tests.
+A small and simple test solver for quickly getting through gstti.com tests.
 
 ## Description
 
