@@ -11,13 +11,13 @@ with open('LICENSE') as f:
     LICENSE = f.read()
 
 setup(
-    name='test_solver',
+    name='gstti-test-solver',
     version='0.1.0',
     description='Package to complete gstti tests quickly.',
     long_description=README,
     author='Matthew Lance Fuller',
     author_email='matthewlancefuller@gmail.com',
-    url='https://github.com/massivelivefun/test_solver',
+    url='https://github.com/massivelivefun/gstti-test-solver',
     license=LICENSE,
     packages=find_packages(exclude=('tests', 'docs'))
 )
