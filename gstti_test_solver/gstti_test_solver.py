@@ -127,8 +127,13 @@ if __name__ == "__main__":
     parser.add_argument("test_name",
                         help="the gstti test that will be taken")
     args = parser.parse_args()
+    test_tag = None
     try:
-        solve_test(args.username, args.password, args.test_name, which_test(args.test_name))
+        test_tag = which_test(args.test_name)
+    except:
+        sys.exit(errno.EPERM)
+    try:
+        solve_test(args.username, args.password, args.test_name, test_tag)
         sys.exit()
     except FileNotFoundError:
         sys.exit(errno.ENOENT)
