@@ -131,11 +131,17 @@ if __name__ == "__main__":
     try:
         test_tag = which_test(args.test_name)
     except:
+        eprint("Unrecognized test_name argument")
         sys.exit(errno.EPERM)
     try:
         solve_test(args.username, args.password, args.test_name, test_tag)
         sys.exit()
     except FileNotFoundError:
+        eprint("Unrecognized test file name")
         sys.exit(errno.ENOENT)
     except ValueError:
+        eprint("Unrecognized test answer")
+        sys.exit(errno.EPERM)
+    except:
+        eprint("Generic error occured")
         sys.exit(errno.EPERM)
