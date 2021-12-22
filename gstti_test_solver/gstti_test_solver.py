@@ -127,12 +127,10 @@ if __name__ == "__main__":
     parser.add_argument("test_name",
                         help="the gstti test that will be taken")
     args = parser.parse_args()
-    test_tag = None
-    try:
-        test_tag = which_test(args.test_name)
-    except:
-        eprint("Unrecognized test_name argument")
-        sys.exit(errno.EPERM)
+    test_tag = which_test(args.test_name)
+    if test_tag == TestType.ERROR:
+        eprint("Unrecognized test name")
+        sys.exit(errno.ENOENT)
     try:
         solve_test(args.username, args.password, args.test_name, test_tag)
         sys.exit()
