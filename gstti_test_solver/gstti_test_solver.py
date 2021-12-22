@@ -36,10 +36,6 @@ tests: Dict[str, TestType] = {
     "renewal10": TestType.RENEWAL_10_HOUR
 }
 
-def help() -> None:
-    print("Usage:\tgstti_test_solver <username> <password> <test_name>\t")
-    print("\tgstti_test_solver --help")
-
 def eprint(*args, **kwargs) -> None:
     print(*args, file=sys.stderr, **kwargs)
 
