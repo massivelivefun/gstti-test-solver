@@ -9,7 +9,7 @@ import sys
 
 class TestType(Enum):
     ### ERROR ENUM VALUE
-    ERROR = 0,
+    ERROR = 0
     ### LICENSE ENUM VALUES
     # 10 Questions
     LICENSE_2_HOUR = 1
