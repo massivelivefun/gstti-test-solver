@@ -2,6 +2,7 @@ from enum import Enum
 from selenium import webdriver
 from typing import Dict
 
+import argparse
 import errno
 import os
 import sys
@@ -115,26 +116,19 @@ def solve_test(username: str, password: str, test_name: str, test_value: TestTyp
 
 # gstti_test_solver <username> <password> <test_name>
 if __name__ == "__main__":
-    match len(sys.argv):
-        case 2:
-            match sys.argv[1]:
-                case "--help":
-                    help()
-                case _:
-                    eprint("Unrecognized secondary flag: " + sys.argv[1])
-                    eprint("Only supported script flag is `--help`")
-                    sys.exit(errno.EPERM)
-        case 4:
-            test = which_test(sys.argv[3])
-            match test:
-                case TestType.ERROR:
-                    eprint("Unrecognized <test_name>: " + sys.argv[3] + " probably not a valid gstti test.")
-                    eprint("gstti_test_solver <username> <password> <test_name>")
-                    sys.exit(errno.ENOENT)
-                case _:
-                    solve_test(sys.argv[1], sys.argv[2], sys.argv[3], test)
-                    sys.exit()
-        case _:
-            eprint("Unrecognized script usage...")
-            eprint("Please use `gstti_test_solver --help` for more information.")
-            sys.exit(errno.EPERM)
+    parser = argparse.ArgumentParser(
+        description="Solve gstti tests in an automated way")
+    parser.add_argument("username",
+                        help="a username to log-in to")
+    parser.add_argument("password",
+                        help="a password to log-in with")
+    parser.add_argument("test_name",
+                        help="the gstti test that will be taken")
+    args = parser.parse_args()
+    try:
+        solve_test(args.username, args.password, args.test_name, which_test(args.test_name))
+        sys.exit()
+    except FileNotFoundError:
+        sys.exit(errno.ENOENT)
+    except ValueError:
+        sys.exit(errno.EPERM)
