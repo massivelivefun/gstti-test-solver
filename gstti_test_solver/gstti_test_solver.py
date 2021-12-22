@@ -62,21 +62,23 @@ def login(driver, username: str, password: str) -> None:
     login_button.click()
 
 def navigate_to_test(driver, test_value) -> None:
+    url = "https://gstti.com/ExamStart.aspx?EID="
     match test_value:
         case TestType.RENEWAL_2_HOUR:
-            driver.get("https://gstti.com/ExamStart.aspx?EID=230")
+            url += "230"
         case TestType.RENEWAL_3_HOUR:
-            driver.get("https://gstti.com/ExamStart.aspx?EID=231")
+            url += "231"
         case TestType.RENEWAL_5_HOUR:
-            driver.get("https://gstti.com/ExamStart.aspx?EID=233")
+            url += "233"
         case TestType.RENEWAL_10_HOUR:
-            driver.get("https://gstti.com/ExamStart.aspx?EID=232")
+            url += "232"
         case TestType.LICENSE_2_HOUR:
-            driver.get("https://gstti.com/ExamStart.aspx?EID=254")
+            url += "254"
         case TestType.LICENSE_15_HOUR:
-            driver.get("https://gstti.com/ExamStart.aspx?EID=256")
+            url += "256"
         case TestType.LICENSE_43_HOUR:
-            driver.get("https://gstti.com/ExamStart.aspx?EID=255")
+            url += "255"
+    driver.get(url)
 
 def complete_test(driver, solutions: list[str]) -> None:
     next_test_question(driver)
