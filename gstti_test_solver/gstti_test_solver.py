@@ -41,8 +41,8 @@ tests: Dict[str, TestType] = {
 def eprint(*args, **kwargs) -> None:
     print(*args, file=sys.stderr, **kwargs)
 
-def which_test(test_str: str) -> TestType:
-    return tests[test_str] if test_str in tests else TestType.ERROR
+def which_test(test_str: str) -> Optional[TestType]:
+    return tests[test_str] if test_str in tests else None
 
 def create_solution_list(test_name: str) -> list[str]:
     test_name_path = os.path.join(os.path.dirname(__file__), "solutions", test_name) + ".txt"
