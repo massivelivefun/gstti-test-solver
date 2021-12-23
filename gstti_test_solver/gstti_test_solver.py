@@ -1,15 +1,16 @@
 from enum import Enum
 from selenium import webdriver
+from selenium.webdriver.firefox.webdriver import WebDriver
 from typing import Dict
+from typing import Optional
 
 import argparse
 import errno
 import os
+import selenium
 import sys
 
 class TestType(Enum):
-    ### ERROR ENUM VALUE
-    ERROR = 0
     ### LICENSE ENUM VALUES
     # 10 Questions
     LICENSE_2_HOUR = 1
