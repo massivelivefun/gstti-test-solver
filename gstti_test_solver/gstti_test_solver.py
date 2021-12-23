@@ -153,6 +153,9 @@ if __name__ == "__main__":
     except ValueError:
         eprint("Unrecognized test answer")
         sys.exit(errno.EPERM)
+    except selenium.common.exceptions.NoSuchWindowException:
+        eprint("Window was closed: The test may have not completed...")
+        sys.exit(errno.EPERM)
     except:
         eprint("Generic error occured")
         sys.exit(errno.EPERM)
