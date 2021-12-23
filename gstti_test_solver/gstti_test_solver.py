@@ -54,6 +54,18 @@ def strip_solution(list: list[str]) -> list[str]:
         stripped_list.append(element.strip())
     return stripped_list
 
+def init_driver() -> WebDriver:
+    # This works, but I just want it off, not redirected
+    logging = False
+    log_path = ""
+    if logging:
+        log_path = os.path.join(os.path.dirname(__file__), os.path.pardir)
+        print(log_path)
+    else:
+        log_path = os.devnull
+    driver = webdriver.Firefox(service_log_path=log_path)
+    return driver
+
 def login(driver, username: str, password: str) -> None:
     username_field = driver.find_element_by_id("ctl00_ContentPlaceHolder1_txtEmail")
     username_field.send_keys(username)
@@ -109,7 +121,7 @@ def select_answer(driver, answer: str) -> None:
 
 def solve_test(username: str, password: str, test_name: str, test_value: TestType) -> None:
     solution_list = create_solution_list(test_name)
-    driver = webdriver.Firefox()
+    driver = init_driver()
     driver.get("https://gstti.com")
     login(driver, username, password)
     navigate_to_test(driver, test_value)
