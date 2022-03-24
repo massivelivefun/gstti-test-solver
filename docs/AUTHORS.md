@@ -1,5 +1,5 @@
 # Authors
 
-See the github [gstti-test-solver Contributors][contributors] list.
+See the github [gstti-test-solver contributors list][contributors].
 
-[contributors]: https://github.com/dezzyne/contrivance/graphs/contributors
+[contributors]: https://github.com/massivelivefun/gstti-test-solver/graphs/contributors
