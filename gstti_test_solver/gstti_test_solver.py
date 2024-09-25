@@ -45,13 +45,13 @@ def which_test(test_str: str) -> Optional[TestType]:
     return tests[test_str] if test_str in tests else None
 
 def create_solution_list(test_name: str) -> list[str]:
-    test_name_path = os.path.join(os.path.dirname(__file__), "solutions", test_name) + ".txt"
+    test_name_path = os.path.join(os.path.dirname(__file__), "solutions", "2024", test_name) + ".txt"
     return strip_solution(open(test_name_path, 'r').readlines())
 
 def strip_solution(list: list[str]) -> list[str]:
     stripped_list = []
     for element in list:
-        stripped_list.append(element.strip())
+        stripped_list.append(element.strip()[-1])
     return stripped_list
 
 def init_driver() -> WebDriver:
@@ -78,19 +78,26 @@ def navigate_to_test(driver, test_value) -> None:
     url = "https://gstti.com/ExamStart.aspx?EID="
     match test_value:
         case TestType.RENEWAL_2_HOUR:
-            url += "230"
+            # 2024 url value
+            url += "308"
         case TestType.RENEWAL_3_HOUR:
-            url += "231"
+            # 2024 url value
+            url += "310"
         case TestType.RENEWAL_5_HOUR:
-            url += "233"
+            # 2024 url value
+            url += "311"
         case TestType.RENEWAL_10_HOUR:
-            url += "232"
+            # 2024 url value
+            url += "309"
         case TestType.LICENSE_2_HOUR:
-            url += "254"
+            # 2024 url value
+            url += "314"
         case TestType.LICENSE_15_HOUR:
-            url += "256"
+            # 2024 url value
+            url += "313"
         case TestType.LICENSE_43_HOUR:
-            url += "255"
+            # 2024 url value
+            url += "312"
     driver.get(url)
 
 def complete_test(driver, solutions: list[str]) -> None:
@@ -141,9 +148,9 @@ if __name__ == "__main__":
                         help="the gstti test that will be taken")
     args = parser.parse_args()
     test_tag = which_test(args.test_name)
-    if test_tag == TestType.ERROR:
-        eprint("Unrecognized test name")
-        sys.exit(errno.ENOENT)
+    # if test_tag == TestType.ERROR:
+    #     eprint("Unrecognized test name")
+    #     sys.exit(errno.ENOENT)
     try:
         solve_test(args.username, args.password, args.test_name, test_tag)
         sys.exit()
