@@ -1,0 +1,260 @@
+D
+D
+B
+B
+A
+C B D
+B
+A B D
+B
+B
+B
+C B D
+B
+A
+C
+C B D
+C
+B A D
+A B
+C
+C B D
+B
+A
+B
+A
+C B D
+C
+C
+B
+A
+C B D
+C B D
+B
+C B D
+C B D
+C
+B
+A
+C
+C B D
+C B D
+A
+B
+C B D
+A
+C B D
+B
+C B D
+C B D
+C
+A
+C
+A
+B
+A
+C B D
+C B D
+C B D
+B
+C B D
+C B D
+C B D
+B
+C
+A
+A
+B
+C
+A
+C B D
+C B D
+A
+C
+C
+B
+B
+B
+C B D
+A
+A
+C
+A
+C B D
+C B D
+C
+C
+A B
+C
+C B D
+A
+C B D
+A
+C B D
+B
+C B D
+A
+B
+C
+C
+A
+A
+A
+C B D
+C
+C
+A
+A
+C B D
+C B
+C
+C B D
+B
+A
+B
+C
+C B D
+C B D
+B
+C B D
+B
+C B D
+B
+B
+C B D
+C
+B
+C B D
+C B D
+C
+C B D
+B
+A
+C B D
+A
+C B D
+B
+C
+C
+C
+A B D
+C B D
+C
+C B D
+B
+C
+C B D
+C B D
+A B D
+A
+B
+C B D
+A
+B
+A
+C
+A
+C B D
+C
+C B D
+C
+A
+C B D
+B
+C
+C
+C B D
+C B D
+C B D
+C B D
+C B D
+B
+A
+C B D
+B
+C
+A
+A B D
+C B D
+C B D
+C
+B A D
+C B D
+C B
+B
+C B D
+B A
+C
+C B
+B A D
+B
+C B D
+A B D
+B
+C B D
+C B D
+A B
+A B D
+A
+C B D
+C B D
+A B D
+C
+C
+C B D
+C
+C
+C B D
+A
+B
+C B D
+C
+B
+C
+B
+A
+C
+C B D
+C
+A
+A
+C
+A
+B
+B A D
+B
+C B
+B A
+B
+C B D
+C B D
+B
+C
+C
+C
+B
+C B D
+B
+A
+B
+C
+A
+B A D
+B A D
+A
+C
+C B D
+B
+C B
+C B D
+C
+C
+A
+B
+C
+C
+B
+C B D
+A
+C
+A
