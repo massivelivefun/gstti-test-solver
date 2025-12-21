@@ -1,0 +1,260 @@
+D
+D
+B
+B
+A
+C B D
+B
+A B D
+B
+B
+B
+C B D
+B
+A
+C
+C B D
+C
+B A D
+A B
+C
+C B D
+B
+A
+B
+A
+C B D
+C
+C
+B
+A
+C B D
+C B D
+B
+C B D
+C B D
+C
+B
+A
+C
+C B D
+C B D
+A
+B
+C B D
+A
+C B D
+B
+C B D
+C B D
+C
+A
+C
+A
+B
+A
+C B D
+C B D
+C B D
+B
+C B D
+C B D
+C B D
+B C
+C A
+A
+A B
+B A
+C A
+A C
+C B D B
+C B D
+A
+C B
+C B
+B A
+B A
+B A
+C B D A
+A B
+A B
+C A
+A
+C B D A
+C B D A
+C B
+C B
+A B C
+C
+C B D A
+A B
+C B D A
+A B
+C B D A
+B
+C B D
+A
+B
+C
+C
+A B
+A
+A
+C B D A
+C A
+C A
+A
+A B
+C B D A
+C B A
+C
+C B D A
+B A
+A B
+B
+C
+C B D
+C B D A
+B A
+C B D A
+B A
+C B D
+B A
+B
+C B D
+C A
+B
+C B D A
+C B D
+C
+C B D A
+B A
+A B
+C B D A
+A
+C B D A
+B A
+C B
+C A
+C A
+A B D C
+C B D A
+C B
+C B D A
+B A
+C A
+C B D A
+C B D
+A B D C
+A B
+B A
+C B D A
+A B
+B
+A
+C
+A
+C B D
+C
+C B D
+C
+A
+C B D
+B
+C
+C
+C B D
+C B D A
+C B D
+C B D
+C B D
+B
+A
+C B D
+B
+C
+A
+A B D C
+C B D A
+C B D
+C
+B A D C
+C B D
+C B A
+B
+C B D
+B A C
+C B
+C B
+B A D C
+B A
+C B D A
+A B D
+B A
+C B D A
+C B D A
+A B C
+A B D
+A
+C B D A
+C B D A
+A B D C
+C
+C
+C B D
+C
+C
+C B D
+A
+B
+C B D
+C
+B
+C
+B
+A
+C
+C B D
+C
+A
+A
+C
+A
+B
+B A D C
+B
+C B
+B A
+B
+C B D A
+C B D
+B
+C
+C
+C
+B
+C B D
+B
+A
+B
+C
+A
+B A D C
+B A D C
+A
+C
+C B D
+B
+C B
+C B D
+C
+C
+A
+B
+C
+C
+B
+C B D
+A
+C
+A
