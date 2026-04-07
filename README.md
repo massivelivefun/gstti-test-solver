@@ -13,3 +13,10 @@ Nothing much more with it, just a convenience.
 
 The geckodriver needs to be installed and on the machine's PATH for this
 script to work.
+
+## How to Use
+
+python -m venv venv
+source venv/bin/activate # macOS / Linux
+venv\Scripts\activate # Windows
+pip install -r requirements.txt

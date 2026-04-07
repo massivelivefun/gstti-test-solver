@@ -45,7 +45,7 @@ def which_test(test_str: str) -> Optional[TestType]:
     return tests[test_str] if test_str in tests else None
 
 def create_solution_list(test_name: str) -> list[str]:
-    test_name_path = os.path.join(os.path.dirname(__file__), "solutions", "2025", test_name) + ".txt"
+    test_name_path = os.path.join(os.path.dirname(__file__), "solutions", "2026", test_name) + ".txt"
     return strip_solution(open(test_name_path, 'r').readlines())
 
 def strip_solution(list: list[str]) -> list[str]:
@@ -91,13 +91,13 @@ def navigate_to_test(driver, test_value) -> None:
             url += "336"
         case TestType.LICENSE_2_HOUR:
             # 2024 url value
-            url += "341"
+            url += "365"
         case TestType.LICENSE_15_HOUR:
             # 2024 url value
-            url += "340"
+            url += "364"
         case TestType.LICENSE_43_HOUR:
             # 2024 url value
-            url += "339"
+            url += "363"
     driver.get(url)
 
 def complete_test(driver, solutions: list[str]) -> None:
